@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="stylesheet.css" />
+    <title>User Directory</title>
+  </head>
+  <body>
+    <main>
+      <h1>User Management Portal</h1>
+
+      <section class="panel">
+        <h2>Register User</h2>
+        <form id="registration-form">
+          <div class="field">
+            <label for="register-username">Username</label>
+            <input id="register-username" name="username" type="text" required />
+          </div>
+          <div class="field">
+            <label for="register-password">Password</label>
+            <input id="register-password" name="password" type="password" required />
+          </div>
+          <div class="field">
+            <label for="register-firstname">First name</label>
+            <input id="register-firstname" name="firstname" type="text" required />
+          </div>
+          <div class="field">
+            <label for="register-lastname">Last name</label>
+            <input id="register-lastname" name="lastname" type="text" required />
+          </div>
+          <div class="field">
+            <label for="register-salary">Salary</label>
+            <input id="register-salary" name="salary" type="number" step="0.01" required />
+          </div>
+          <div class="field">
+            <label for="register-age">Age</label>
+            <input id="register-age" name="age" type="number" min="0" required />
+          </div>
+          <button type="submit">Create Account</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Sign In</h2>
+        <form id="signin-form">
+          <div class="field">
+            <label for="signin-username">Username</label>
+            <input id="signin-username" name="username" type="text" required />
+          </div>
+          <div class="field">
+            <label for="signin-password">Password</label>
+            <input id="signin-password" name="password" type="password" required />
+          </div>
+          <button type="submit">Sign In</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Search Users</h2>
+        <form id="search-name-form" class="inline-form">
+          <div class="field">
+            <label for="search-firstname">First name</label>
+            <input id="search-firstname" name="firstname" type="text" />
+          </div>
+          <div class="field">
+            <label for="search-lastname">Last name</label>
+            <input id="search-lastname" name="lastname" type="text" />
+          </div>
+          <button type="submit">Search by Name</button>
+        </form>
+
+        <form id="search-username-form" class="inline-form">
+          <div class="field">
+            <label for="search-username">Username</label>
+            <input id="search-username" name="username" type="text" required />
+          </div>
+          <button type="submit">Find User</button>
+        </form>
+
+        <form id="search-salary-form" class="inline-form">
+          <div class="field">
+            <label for="salary-min">Salary from</label>
+            <input id="salary-min" name="min" type="number" step="0.01" />
+          </div>
+          <div class="field">
+            <label for="salary-max">Salary to</label>
+            <input id="salary-max" name="max" type="number" step="0.01" />
+          </div>
+          <button type="submit">Filter Salary</button>
+        </form>
+
+        <form id="search-age-form" class="inline-form">
+          <div class="field">
+            <label for="age-min">Age from</label>
+            <input id="age-min" name="min" type="number" />
+          </div>
+          <div class="field">
+            <label for="age-max">Age to</label>
+            <input id="age-max" name="max" type="number" />
+          </div>
+          <button type="submit">Filter Age</button>
+        </form>
+
+        <form id="search-registered-after-form" class="inline-form">
+          <div class="field">
+            <label for="registered-after-username">Registered after user</label>
+            <input id="registered-after-username" name="username" type="text" required />
+          </div>
+          <button type="submit">Find Users</button>
+        </form>
+
+        <form id="search-same-day-form" class="inline-form">
+          <div class="field">
+            <label for="same-day-username">Registered same day as user</label>
+            <input id="same-day-username" name="username" type="text" required />
+          </div>
+          <button type="submit">Find Users</button>
+        </form>
+
+        <div class="actions">
+          <button id="never-signed-in-btn" type="button">Users Never Signed In</button>
+          <button id="registered-today-btn" type="button">Registered Today</button>
+          <button id="view-all-btn" type="button">View All Users</button>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>Results</h2>
+        <div id="message"></div>
+        <table id="users-table">
+          <thead>
+            <tr>
+              <th>Username</th>
+              <th>First name</th>
+              <th>Last name</th>
+              <th>Salary</th>
+              <th>Age</th>
+              <th>Registered</th>
+              <th>Last Sign-In</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+    </main>
+    <script src="index.js"></script>
+  </body>
+</html>
