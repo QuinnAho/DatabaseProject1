@@ -2,6 +2,7 @@
 
 User registration and authentication web application with advanced search functionality. Built with Node.js, Express, MySQL, and vanilla JavaScript.
 
+**Video Demo:** https://drive.google.com/file/d/1YRTn4Y6OQ8l-6YmYSG0wKfFCyPrjIc3K/view?usp=sharing
 ## Features
 
 - User registration with bcrypt password hashing
